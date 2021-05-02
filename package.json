@@ -1,0 +1,42 @@
+{
+  "name": "wechaty-bible",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "source ./.env & ts-node server/index.ts",
+    "dev": "nodemon --config nodemon.json server/index.ts",
+    "debug": "ts-node src/util/bibleUtils.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.7.0",
+    "@elastic/elasticsearch": "^6.8.0",
+    "assert": "^2.0.0",
+    "aws-sdk": "^2.854.0",
+    "axios": "^0.21.1",
+    "canvas": "2.6.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "file-box": "^0.16.8",
+    "influx": "^5.7.0",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.4",
+    "node-xlsx": "^0.16.1",
+    "nzh": "^1.0.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2",
+    "wechaty": "^0.56.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

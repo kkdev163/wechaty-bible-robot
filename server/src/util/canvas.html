@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #canvas {
+            background-color: #E0E0E0;
+        }
+    </style>
+
+
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    var rangeInfo = "伯一6~12，二1~7，太十二26，来二14，罗十六20，启十二5、7~11";
+    var mock = [[{ "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "6", "sectionCn": "6", "content": "有一天，神的众子来侍立在耶和华面前，撒但也来在其中。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "7", "sectionCn": "7", "content": "耶和华问撒但说，你从哪里来？撒但回答说，我从地上走来走去，往返而来。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "8", "sectionCn": "8", "content": "耶和华问撒但说，你曾用心察看我的仆人约伯没有？地上没有人像他完全且正直，敬畏神，远离恶事。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "9", "sectionCn": "9", "content": "撒但回答耶和华说，约伯敬畏神，岂是无故呢？" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "10", "sectionCn": "10", "content": "你岂不是四面圈上篱笆围护他和他的家，并他一切所有的吗？他手所作的，你都赐福；他的家产也在地上大大增多。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "11", "sectionCn": "11", "content": "你且伸手，碰他一切所有的，他必当面咒诅你。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "12a", "sectionCn": "12上", "content": "耶和华对撒但说，看哪，凡他所有的，都在你手中；只是不可伸手加害于他。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 1, "chapterS": "一", "section": "12b", "sectionCn": "12下", "content": "于是撒但从耶和华面前退去。" }], [{ "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 2, "chapterS": "二", "section": "1", "sectionCn": "1", "content": "又有一天，神的众子来侍立在耶和华面前，撒但也来在其中，站在耶和华面前。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 2, "chapterS": "二", "section": "2", "sectionCn": "2", "content": "耶和华问撒但说，你从哪里来？撒但回答说，我从地上走来走去，往返而来。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 2, "chapterS": "二", "section": "3", "sectionCn": "3", "content": "耶和华问撒但说，你曾用心察看我的仆人约伯没有？地上没有人像他完全且正直，敬畏神，远离恶事；你虽激动我攻击他，无故地毁灭他，他仍然持守他的纯全。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 2, "chapterS": "二", "section": "4", "sectionCn": "4", "content": "撒但回答耶和华说，人以皮代皮，为了自己的性命，情愿付出一切所有的。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 2, "chapterS": "二", "section": "5", "sectionCn": "5", "content": "你且伸手，伤他的骨头和他的肉；他必当面咒诅你。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 2, "chapterS": "二", "section": "6", "sectionCn": "6", "content": "耶和华对撒但说，他在你手中；只要存留他的性命。" }, { "bookName": "约伯记", "bookNameAbbr": "伯", "chapterN": 2, "chapterS": "二", "section": "7", "sectionCn": "7", "content": "于是撒但从耶和华面前退去，击打约伯，使他从脚掌到头顶都长了毒疮。" }], [{ "bookName": "马太福音", "bookNameAbbr": "太", "chapterN": 12, "chapterS": "十二", "section": "26", "sectionCn": "26", "content": "若撒但赶逐撒但，他就自相分争，他的国怎能站住？" }], [{ "bookName": "希伯来书", "bookNameAbbr": "来", "chapterN": 2, "chapterS": "二", "section": "14", "sectionCn": "14", "content": "儿女既同有血肉之体，祂也照样亲自有分于血肉之体，为要借着死，废除那掌死权的，就是魔鬼，" }], [{ "bookName": "罗马书", "bookNameAbbr": "罗", "chapterN": 16, "chapterS": "十六", "section": "20", "sectionCn": "20", "content": "平安的神快要将撒但践踏在你们的脚下。愿我们主耶稣的恩，与你们同在。" }], [{ "bookName": "启示录", "bookNameAbbr": "启", "chapterN": 12, "chapterS": "十二", "section": "5", "sectionCn": "5", "content": "妇人生了一个男孩子，是将来要用铁杖辖管万国的；她的孩子被提到神和祂的宝座那里去了。" }, { "bookName": "启示录", "bookNameAbbr": "启", "chapterN": 12, "chapterS": "十二", "section": "7", "sectionCn": "7", "content": "天上起了争战，米迦勒和他的使者与龙争战，龙和它的使者也争战，" }, { "bookName": "启示录", "bookNameAbbr": "启", "chapterN": 12, "chapterS": "十二", "section": "8", "sectionCn": "8", "content": "并没有得胜，天上再没有他们的地方。" }, { "bookName": "启示录", "bookNameAbbr": "启", "chapterN": 12, "chapterS": "十二", "section": "9", "sectionCn": "9", "content": "大龙就被摔下去，它是那古蛇，名叫魔鬼，又叫撒但，是迷惑普天下的，它被摔在地上，它的使者也一同被摔下去。" }, { "bookName": "启示录", "bookNameAbbr": "启", "chapterN": 12, "chapterS": "十二", "section": "10", "sectionCn": "10", "content": "我听见天上有大声音说，我们神的救恩、能力、国度并祂基督的权柄，现在都来到了，因为那在我们神面前昼夜控告我们弟兄们的控告者，已经被摔下去了。" }, { "bookName": "启示录", "bookNameAbbr": "启", "chapterN": 12, "chapterS": "十二", "section": "11", "sectionCn": "11", "content": "弟兄们胜过他，是因羔羊的血，并因自己所见证的话，他们虽至于死，也不爱自己的魂生命。" }]]
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    const maxWidth = document.scrollingElement.clientWidth;
+    
+    const padding = 10;
+    const headMarginTop = 18;
+
+    const linkFontSize = 18;
+    const linkFontColor = '#2040A0';
+
+    const headFontSize = 18;
+    const headFontColor = 'red';
+
+    const contentFontSize = 22;
+    const contentFontColor = 'black';
+    
+    canvas.width = maxWidth;
+    canvas.height = 5000;
+    ctx.textBaseline = 'hanging';
+
+    function drawBibleText(data) {
+       
+        var currentHeihgt = padding;
+
+        const sections = data.reduce((acc, sects) => {
+            return acc.concat(sects);
+        }, [])
+
+        ctx.font = `${linkFontSize}px serif`;
+        ctx.fillStyle = linkFontColor;
+        
+        const linkContent = '读经: ' + rangeInfo;
+        const lines = getLines(linkContent);
+        lines.forEach(l => {
+            ctx.fillText(l, 0, currentHeihgt)
+            currentHeihgt += (contentFontSize + 10)
+        })
+
+        sections.forEach((section) => {
+            ctx.font = `${headFontSize}px serif`;
+            ctx.fillStyle = headFontColor;
+            currentHeihgt += 12 + headMarginTop;
+            ctx.fillText(`${section.bookNameAbbr}${section.chapterN}:${section.sectionCn}`, 0, currentHeihgt)
+            
+            currentHeihgt += 12 + headMarginTop;
+            ctx.font = `${contentFontSize}px serif`;
+            ctx.fillStyle = contentFontColor;
+
+            const lines = getLines(section.content);
+            lines.forEach(l => {
+                ctx.fillText(l, 10, currentHeihgt)
+                currentHeihgt += (contentFontSize + 10)
+            })
+        })
+
+        function getLines(str) {
+            let content = str.split('');
+            let lines = [];
+            while (content.length > 0) {
+                let currentLine = [];
+                while (ctx.measureText(currentLine.join('')).width < maxWidth - 3 * padding && content.length) {
+                    currentLine.push(content.shift())
+                }
+                lines.push(currentLine.join(''));
+            }
+            return lines;
+        }
+    }
+
+
+
+    drawBibleText(mock);
+
+</script>
+</html>
