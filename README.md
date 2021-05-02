@@ -11,11 +11,11 @@
 
 ## 功能演示
 ### 翻圣经、翻诗歌
-![image](https://raw.githubusercontent.com/kkdev163/bible-robot/master/public/images/%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.jpg)
+![image](https://raw.githubusercontent.com/kkdev163/wechaty-bible-robot/master/public/images/%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.jpg)
 ### 晨兴推送
-![image](https://raw.githubusercontent.com/kkdev163/bible-robot/master/public/images/%E6%99%A8%E5%85%B4.jpg)
+![image](https://raw.githubusercontent.com/kkdev163/wechaty-bible-robot/master/public/images/%E6%99%A8%E5%85%B4.jpg)
 ### 群读经提醒、统计
-![image](https://raw.githubusercontent.com/kkdev163/bible-robot/master/public/images/%E8%AF%BB%E7%BB%8F%E7%BB%9F%E8%AE%A1.jpg)
+![image](https://raw.githubusercontent.com/kkdev163/wechaty-bible-robot/master/public/images/%E8%AF%BB%E7%BB%8F%E7%BB%9F%E8%AE%A1.jpg)
 
 使用提示: 在群聊中发送指令时，需要添加 @读经助手 前缀。(已读 除外)
 
